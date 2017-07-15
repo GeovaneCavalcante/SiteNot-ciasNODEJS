@@ -1,10 +1,118 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Bem vindo a pagina inicial</h1>
-  </body>
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Portal de notícias</title>
+
+		<!-- JQuery -->
+		<script src="js/jquery-2.2.1.js"></script>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- incluindo css -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico" />
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<img src="images/logo.png" />
+				</div>
+
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/">HOME</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-md-8">
+	    			<div class="noticia_wrapper">
+		    			<span class="noticia_autor"><%= cinco[0].autor%></span>
+		    			<a href="noticia?id=<%=cinco[0].id%>" class="noticia_titulo"><%= cinco[0].titulo%></a>
+		    			<span class="noticia_data"><%= cinco[0].data_hora%></span>
+		    			<br />
+		    			<p class="noticia_resumo">
+		    				<%= cinco[0].resumo%>
+		    			</p>
+		    		</div>
+		    	</div>
+
+	    		<div class="col-md-4">
+						<div class="noticia_wrapper">
+		    			<span class="noticia_autor"><%= cinco[1].autor%></span>
+		    			<a href="noticia?id=<%=cinco[1].id%>" class="noticia_titulo"><%= cinco[1].titulo%></a>
+		    			<span class="noticia_data"><%= cinco[1].data_hora%></span>
+		    			<br />
+		    			<p class="noticia_resumo">
+		    				<%= cinco[1].resumo%>
+		    			</p>
+		    		</div>
+	    	</div>
+
+	    	<div class="row">
+	    		<div class="col-md-4">
+						<div class="noticia_wrapper">
+		    			<span class="noticia_autor"><%= cinco[2].autor%></span>
+		    			<a href="noticia?id=<%=cinco[2].id%>" class="noticia_titulo"><%= cinco[2].titulo%></a>
+		    			<span class="noticia_data"><%= cinco[2].data_hora%></span>
+		    			<br />
+		    			<p class="noticia_resumo">
+		    				<%= cinco[2].resumo%>
+		    			</p>
+		    		</div>
+		    	</div>
+
+	    		<div class="col-md-4">
+						<div class="noticia_wrapper">
+		    			<span class="noticia_autor"><%= cinco[3].autor%></span>
+		    			<a href="noticia?id=<%=cinco[3].id%>" class="noticia_titulo"><%= cinco[3].titulo%></a>
+		    			<span class="noticia_data"><%= cinco[3].data_hora%></span>
+		    			<br />
+		    			<p class="noticia_resumo">
+		    				<%= cinco[3].resumo%>
+		    			</p>
+		    		</div>
+		    	</div>
+
+	    		<div class="col-md-4">
+						<div class="noticia_wrapper">
+		    			<span class="noticia_autor"><%= cinco[4].autor%></span>
+		    			<a href="noticia?id=<%=cinco[4].id%>" class="noticia_titulo"><%= cinco[4].titulo%></a>
+		    			<span class="noticia_data"><%= cinco[4].data_hora%></span>
+		    			<br />
+		    			<p class="noticia_resumo">
+		    				<%= cinco[4].resumo%>
+		    			</p>
+		    		</div>
+		    	</div>
+	    	</div>
+
+	    	<div class="row ver_mais">
+	    		<button type="button" class="btn btn-default"><a href="noticias">Ver todas as notícias</a></button>
+	    	</div>
+
+	    </div>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</body>
 </html>
