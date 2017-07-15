@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Adicionar notícia</h1>
+    <br>
+    <% if (validacao) { %>
+      <ul>
+        <% for (let i = 0; i < validacao.length; i++){ %>
+          <li><%=validacao[i].msg%></li>
+        <% } %>
+      </ul>
+    <% } %>
+    <form class="" action="/noticias/salvar" method="post">
+      <label>Titulo</label>
+      <input type="text" id="titulo" name="titulo" value="<%=noticia.titulo %>" placeholder="Titulo">
+      <br>
+      <label>Resumo</label>
+      <input type="text" id="resumo" name="resumo" value="<%=noticia.resumo %>" placeholder="resumo">
+      <br>
+      <label>Autor</label>
+      <input type="text" id="autor" name="autor" value="<%=noticia.autor %>" placeholder="Autor">
+      <br>
+      <label>Data</label>
+      <input type="date" id="data_hora" name="data_hora" value="<%=noticia.data_hora %>" placeholder="Data">
+      <br>
+      <label>Noticia</label>
+      <textarea name="noticia" id="noticia" rows="5" value="<%=noticia.noticia %>" placeholder="Noticia"></textarea>
+      <br>
+      <input type="submit" value="envia">
+    </form>
+  </body>
+</html>

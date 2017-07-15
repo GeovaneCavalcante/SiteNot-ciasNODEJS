@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Noticia</h1>
+    <table>
+      <tr>
+        <td>id</td>
+        <td>Titulo</td>
+        <td>Noticia</td>
+      </tr>
+      <%for (let i = 0; i < noticias.length; i++) {%>
+        <tr>
+          <td><%=noticias[i].id %></td>
+          <td><%=noticias[i].titulo %></td>
+          <td><%=noticias[i].noticia %></td>
+        </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
